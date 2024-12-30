@@ -1,0 +1,256 @@
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background-color: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Centralizado */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow-x: auto; /* Scroll horizontal em telas pequenas */
+}
+
+h1{
+    font-size: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: green;
+    border-radius: 50px;
+    
+}
+
+/* Tabela Geral */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da Tabela */
+thead th {
+    padding: 12px 8px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+/* Linhas da Tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9fafc;
+}
+
+tbody tr:hover {
+    background-color: #d1f2e5;
+    transition: background-color 0.3s ease;
+}
+
+/* Células */
+td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Célula do Clube */
+td:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: left;
+    cursor: pointer;
+}
+
+td:nth-child(2):hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+td:nth-child(11) i { /*ESTILIZAÇÃO DO check*/
+    font-size: 20px;
+    background-color: green;
+    color: white;
+    border-radius: 45px;
+    margin-right: 5px;
+}
+
+td:nth-child(11) .bi-x { /*ESTILIZAÇÃO DO X*/
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    border-radius: 45px;
+    margin-right: 5px;
+}
+
+td:nth-child(11) .fa-minus { /*ESTILIZAÇÃO DO -*/
+    font-size: 22px;
+    background-color: rgb(90, 88, 88);
+    color: white;
+    border-radius: 40px;
+    margin-right: 5px;
+}
+
+/* Ícones dos Times */
+.team-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* Coluna de Posição */
+td:first-child {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Coluna de Últimas 5 */
+td:last-child {
+    font-weight: bold;
+    color: #777;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    tbody td {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 12px;
+    }
+
+    tbody td:nth-child(2) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-icon {
+        margin-bottom: 5px;
+    }
+
+    tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #777;
+    }
+}
+/* Reset Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    background-color: #d0d5df;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container Centralizado */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow-x: auto; /* Scroll horizontal em telas pequenas */
+}
+
+/* Tabela Geral */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da Tabela */
+thead {
+    background-color: #03910a;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+thead th {
+    padding: 20px 8px;
+    text-align: center;
+}
+
+/* Linhas da Tabela */
+tbody tr:nth-child(even) {
+    background-color: #f9fafc;
+}
+
+tbody tr:hover {
+    background-color: #d1f2e5;
+    transition: background-color 0.3s ease;
+}
+
+/* Células */
+td {
+    padding: 12px 8px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Célula do Clube */
+td:nth-child(2) {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: flex-start; /* Alinha horizontalmente à esquerda */
+    gap: 10px; /* Espaço entre o ícone e o texto */
+    text-align: left;
+    padding-left: 12px; /* Garante um espaço uniforme na esquerda */
+}
+
+/* Ícones dos Times */
+.team-icon {
+    width: 40px; /* Ajusta o tamanho do ícone */
+    height: 40px;
+    object-fit: contain;
+}
+
+
+/* Coluna de Posição */
+td:first-child {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Coluna de Últimas 5 */
+td:last-child {
+    font-weight: bold;
+    color: #777;
+}
