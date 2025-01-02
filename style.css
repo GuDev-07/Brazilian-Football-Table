@@ -3,7 +3,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -20,10 +19,10 @@ body {
 .container {
     width: 100%;
     background-color: #f3f3f3;
-    max-width: 1200px;
+    max-width: 1300px;
     border-radius: 12px;
     padding: 27px;
-    border-style:double;
+    border-style: double;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     overflow-x: auto; /* Adicionar rolagem horizontal se necessário */
 }
@@ -37,7 +36,7 @@ h1 {
     background-color: #068f0de3;
     border-radius: 13px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: "Poppins" sans-serif;
+    font-family: "Poppins", sans-serif;
     line-height: 1.8;
 }
 
@@ -46,14 +45,15 @@ table {
     width: 100%;
     table-layout: auto; /* Permitir que a tabela ajuste a largura automaticamente */
     border-collapse: collapse;
+    overflow-x: auto; /* Habilitar rolagem horizontal se necessário */
 }
-
 
 th, td {
     padding: 15px;
     text-align: left;
     border-bottom: 2px solid #ddd;
     font-size: 20px;
+    word-wrap: break-word; /* Garantir que o conteúdo quebre linha se for muito longo */
 }
 
 th {
@@ -94,7 +94,7 @@ tr:hover {
     border-radius: 15px;
 }
 
-/* Tabela ajustada para celular */
+/* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
     h1 {
         font-size: 28px;
@@ -102,14 +102,19 @@ tr:hover {
 
     table {
         font-size: 12px;
+        width: 100%;
+        display: block; /* Transformar a tabela em um bloco para rolar horizontalmente */
+        overflow-x: auto; /* Permitir rolagem horizontal na tabela */
+        -webkit-overflow-scrolling: touch; /* Suporte de rolagem suave em dispositivos móveis */
     }
 
     th, td {
-        padding: 5px;
+        padding: 10px;
+        word-wrap: break-word; /* Impedir que o texto transborde nas células */
     }
 
     td img {
-        width: 25px; /* Ajuste do tamanho das imagens no mobile */
-        height: 25px;
+        width: 40px; /* Ajuste do tamanho das imagens no mobile */
+        height: 40px;
     }
 }
