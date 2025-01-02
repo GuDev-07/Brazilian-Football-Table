@@ -19,7 +19,7 @@ body {
 .container {
     width: 100%;
     background-color: #f3f3f3;
-    max-width: 1300px;
+    max-width: 1200px;
     border-radius: 12px;
     padding: 27px;
     border-style: double;
@@ -59,7 +59,7 @@ th, td {
 th {
     background-color: #1e3a8a;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -102,7 +102,7 @@ tr:hover {
 
     table {
         font-size: 12px;
-        width: 100%;
+        width: 200%;
         display: block; /* Transformar a tabela em um bloco para rolar horizontalmente */
         overflow-x: auto; /* Permitir rolagem horizontal na tabela */
         -webkit-overflow-scrolling: touch; /* Suporte de rolagem suave em dispositivos móveis */
