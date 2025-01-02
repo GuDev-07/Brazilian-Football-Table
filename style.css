@@ -51,10 +51,12 @@ table {
 th, td {
     padding: 15px;
     text-align: left;
-    border-bottom: 2px solid #ddd;
+    border-bottom: 1px solid #ddd;
     font-size: 19px;
-    word-wrap: break-word; /* Garantir que o conteúdo quebre linha se for muito longo */
+    flex-wrap: wrap;
 }
+
+
 
 th {
     background-color: #1e3a8a;
@@ -117,4 +119,24 @@ tr:hover {
         width: 40px; /* Ajuste do tamanho das imagens no mobile */
         height: 40px;
     }
+
+    /* Ajuste para os ícones */
+    .bi-check,
+    .bi-x,
+    .fas.fa-minus {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .icon-container {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    /* Ajuste para os nomes dos times */
+    .team-name {
+        white-space: nowrap;
+    }
 }
+
