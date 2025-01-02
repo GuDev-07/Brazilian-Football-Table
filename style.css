@@ -19,7 +19,7 @@ body {
 .container {
     width: 100%;
     background-color: #f3f3f3;
-    max-width: 1200px;
+    max-width: 1100px;
     border-radius: 12px;
     padding: 27px;
     border-style: double;
@@ -32,7 +32,6 @@ h1 {
     margin-bottom: 25px;
     color: #000000;
     font-size: 48px;
-    font-weight: 600;
     background-color: #068f0de3;
     border-radius: 13px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -121,22 +120,20 @@ tr:hover {
     }
 
     /* Ajuste para os ícones */
-    .bi-check,
-    .bi-x,
-    .fas.fa-minus {
-        display: inline-block;
-        margin-right: 5px;
-    }
-
     .icon-container {
         display: flex;
+        flex-wrap: nowrap;
         justify-content: space-between;
-        width: 100%;
+    }
+
+    .bi-check, .bi-x, .fas.fa-minus {
+        flex-wrap: ;
     }
 
     /* Ajuste para os nomes dos times */
     .team-name {
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
-
