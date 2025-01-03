@@ -7,7 +7,9 @@
 
 body {
     font-family: "Open Sans", serif;
-    background-color: #b1b1b1;
+    background: linear-gradient(rgba(13, 78, 44, 0.7), rgba(13, 78, 44, 0.7)), url('images/football-pc-x5vu5pq9p76m0qe9.jpg');
+    background-size: cover;
+    height: 200px; /* ajuste conforme necessário */
     font-size: 19px;
 }
 
@@ -15,8 +17,6 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 20px;
-    background-color: #0d4e2c;
-    flex-wrap: wrap;
 }
 
 #logo img {
@@ -168,7 +168,7 @@ i.bi-x {
     .header {
         flex-direction:column;
         align-items: center;
-       
+        padding: 5px;
     }
 
     #logo img {
