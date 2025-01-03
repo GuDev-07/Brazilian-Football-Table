@@ -1,4 +1,4 @@
-/* Resetando o padrão de estilo */
+/* Geral */
 * {
     margin: 0;
     padding: 0;
@@ -6,134 +6,146 @@
 }
 
 body {
-    background-color: #5a5a5a;
-    color: #4b4b4b;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    overflow-x: hidden; /* Evitar rolagem horizontal indesejada */
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {
-    width: 100%;
-    background-color: #f3f3f3;
-    max-width: 1100px;
-    border-radius: 12px;
-    padding: 27px;
-    border-style: double;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    overflow-x: auto; /* Adicionar rolagem horizontal se necessário */
+    font-family: "Open Sans", serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 20px;
 }
 
 h1 {
     text-align: center;
-    margin-bottom: 25px;
-    color: #000000;
-    font-size: 48px;
-    background-color: #068f0de3;
-    border-radius: 13px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    font-family: "Poppins", sans-serif;
-    line-height: 1.8;
+    margin-top: 40px;
+    color: #333;
+    font-weight: 900;
 }
 
-/* Estilos da Tabela */
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+/* Tabela */
 table {
     width: 100%;
-    table-layout: auto; /* Permitir que a tabela ajuste a largura automaticamente */
     border-collapse: collapse;
-    overflow-x: auto; /* Habilitar rolagem horizontal se necessário */
+    margin-top: 10px;
 }
 
+/* Tabela */
 th, td {
-    padding: 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    font-size: 19px;
-    flex-wrap: wrap;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden; /* Evita conteúdo transbordando */
+    white-space: nowrap; /* Garante que o conteúdo não quebre */
 }
 
+.team-cell {
+    display: flex; /* Aplica Flexbox para alinhar horizontalmente */
+    align-items: center; /* Alinha verticalmente */
+    justify-content: flex-start; /* Alinha à esquerda */
+    white-space: nowrap; /* Impede quebra de linha */
+    gap: 5px; /* Espaço entre o ícone e o texto */
+    padding-left: 5px;
+    overflow: hidden; /* Garante que nada ultrapasse */
+    vertical-align: middle;
+}
 
+/* Ícone do time */
+.team-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    flex-shrink: 0; /* Evita que o ícone diminua */
+    vertical-align: middle;
+}
 
 th {
-    background-color: #1e3a8a;
-    color: white;
-    font-size: 25px;
+    background-color: #2c3e50;
+    color: #fff;
+    font-weight: bold;
     text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-td img {
-    width: 100px; /* Ajustar o tamanho das imagens */
-    height: 45px; /* Garantir que a altura não seja cortada */
-    object-fit: contain; /* Garantir que a imagem se ajuste sem cortar */
-    margin-right: 10px;
-    cursor: pointer;
+td {
+    background-color: #eef1f3;
+    font-size: 18px;
+    color: #0c0c0c;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
 }
 
-tr:hover {
-    background-color: #e5e7eb;
+
+/* Ícone do time */
+.team-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+    flex-shrink: 0; /* Evita que o ícone diminua */
 }
 
-/* Cores para o status das últimas 5 partidas */
-.bi-check {
-    color: #ffffff;
-    background-color: #108514;
-    border-radius: 15px;
+/* Ícones de desempenho */
+i {
+    font-size: 19px;
+    color: white;
+    background-color: #00aa09;
+    border-radius: 17px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-.bi-x {
-    color: #ffffff;
-    background-color: #db0c0c;
-    border-radius: 15px;
+i.fas.fa-minus {
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 17px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-.fas.fa-minus {
-    color: #f3f3f3;
-    background-color: #525252;
-    border-radius: 15px;
+i.bi-x {
+    background-color: #fa0c04;
+    color: white;
+    border-radius: 17px;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
-/* Ajustes para dispositivos móveis */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 28px;
-    }
 
+/* Responsividade para telas menores (como celulares) */
+@media (max-width: 480px) {
     table {
-        font-size: 12px;
-        width: 200%;
-        display: block; /* Transformar a tabela em um bloco para rolar horizontalmente */
-        overflow-x: auto; /* Permitir rolagem horizontal na tabela */
-        -webkit-overflow-scrolling: touch; /* Suporte de rolagem suave em dispositivos móveis */
+        font-size: 0.3rem;
     }
 
     th, td {
-        padding: 10px;
-        word-wrap: break-word; /* Impedir que o texto transborde nas células */
+        padding: 8px; /* Reduz o padding */
     }
 
-    td img {
-        width: 40px; /* Ajuste do tamanho das imagens no mobile */
-        height: 40px;
+    .team-icon {
+        width: 20px;
+        height: 20px;
     }
 
-    /* Ajuste para os ícones */
-    .icon-container {
+    i {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .team-cell {
         display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-
-    .bi-check, .bi-x, .fas.fa-minus {
-        flex-wrap: ;
-    }
-
-    /* Ajuste para os nomes dos times */
-    .team-name {
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
         white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
     }
 }
