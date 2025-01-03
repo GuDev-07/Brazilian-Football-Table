@@ -27,6 +27,9 @@
 
 # 🚀 Navegação Rápida e direta
 1️⃣ Classificação Geral: Veja a posição de cada time.
+
 2️⃣ Detalhes do Time: Estatísticas como pontos, gols e desempenho recente.
+
 3️⃣ Rodadas Anteriores: Acompanhe o histórico de partidas.
+
 4️⃣ Destaques da Temporada: Conheça os melhores momentos do campeonato.
