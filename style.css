@@ -7,24 +7,74 @@
 
 body {
     font-family: "Open Sans", serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #b1b1b1;
     font-size: 19px;
 }
 
-h1 {
-    text-align: center;
-    margin-top: 40px;
-    color: #333;
-    font-weight: 900;
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0d4e2c;
+    flex-wrap: wrap;
 }
+
+#logo img {
+    width: 100px;
+    height: 100px;
+}
+
+.navigation {
+    flex-grow: 1;
+    display: flex; 
+    justify-content: center;
+}
+
+/* Estilo para a barra de navegação */
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    padding-right: 100px;
+}
+
+.navigation li button {
+    font-size: 20px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #202b36, #1a232c);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 24px;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.568);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.navigation li button:hover,
+.navigation li.active button {
+    background: linear-gradient(135deg, #239b2d, #1d7c22);
+    color: #ffffff;
+    transform: translateY(-2px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.navigation li button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Container */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 20px;
 }
 
 /* Tabela */
@@ -32,6 +82,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
+    padding: 10px 20px;
 }
 
 /* Tabela */
@@ -67,14 +118,14 @@ th {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 20px;
     font-weight: 900;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
 }
 
 td {
     background-color: #eef1f3;
-    font-size: 18px;
+    font-size: 19px;
     color: #0c0c0c;
     font-weight: 600;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.192);
@@ -113,39 +164,50 @@ i.bi-x {
 }
 
 
-/* Responsividade para telas menores (como celulares) */
 @media (max-width: 480px) {
-    table {
-        font-size: 0.3rem;
+    .header {
+        flex-direction:column;
+        align-items: center;
+       
     }
 
-    th, td {
-        padding: 8px; /* Reduz o padding */
+    #logo img {
+        width: 80px;
+        height: 60px;
+        padding-left: 20px;
     }
 
-    .team-icon {
-        width: 20px;
-        height: 20px;
+    .navigation ul {
+        flex-direction: column;
+        gap: 5px;
+        padding-left: 120px;
+        align-items: center;
     }
 
-    i {
+    .navigation li button {
         font-size: 12px;
+        padding: 4px 8px;
     }
 
     .container {
-        padding: 15px;
+        padding: 10px;
     }
 
-    h1 {
-        font-size: 1.5rem;
+    table {
+        font-size: 0.7rem;
     }
 
-    .team-cell {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5px;
-        white-space: nowrap;
-        overflow: hidden;
+    th, td {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .team-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    i {
+        font-size: 8px;
     }
 }
