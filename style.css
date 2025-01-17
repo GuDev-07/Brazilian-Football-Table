@@ -1,17 +1,27 @@
-/* Geral */
+/*ESTILIZAÇÃO DA PÁGINA PRINCIPAL*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    margin: 0; /* Remove margens do corpo e do html */
+    padding: 0; /* Remove preenchimentos */
+    height: 100%; /* Garante que o html cubra 100% da altura */
+}
+
 body {
     font-family: "Open Sans", serif;
     background: linear-gradient(rgba(13, 78, 44, 0.7), rgba(13, 78, 44, 0.7)), url('images/football-pc-x5vu5pq9p76m0qe9.jpg');
-    background-size: cover;
-    height: 200px; /* ajuste conforme necessário */
+    background-size: cover; /* A imagem cobre toda a área visível */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+    background-position: center; /* Centraliza a imagem */
+    min-height: 100vh; /* O corpo cobre toda a janela */
     font-size: 19px;
 }
+
 
 .header {
     display: flex;
@@ -36,15 +46,16 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 10px;
+    gap: 30px;
     padding-right: 100px;
 }
 
-.navigation li button {
+.navigation li a {
     font-size: 20px;
     cursor: pointer;
     background: linear-gradient(135deg, #202b36, #1a232c);
     color: #fff;
+    text-decoration: none;
     border: none;
     border-radius: 12px;
     padding: 12px 24px;
@@ -55,15 +66,15 @@ body {
     outline: none;
 }
 
-.navigation li button:hover,
-.navigation li.active button {
+.navigation li a:hover,
+.navigation li.active a {
     background: linear-gradient(135deg, #239b2d, #1d7c22);
     color: #ffffff;
     transform: translateY(-2px); 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.navigation li button:active {
+.navigation li a:active {
     transform: translateY(0);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -179,14 +190,16 @@ i.bi-x {
 
     .navigation ul {
         flex-direction: column;
-        gap: 5px;
+        gap: 13px;
         padding-left: 120px;
         align-items: center;
+        font-weight: 600;
     }
-
-    .navigation li button {
-        font-size: 12px;
-        padding: 4px 8px;
+    
+    .navigation li a {
+        font-size: 14px; /* Tamanho menor para os links */
+        font-weight: 600;
+        padding: 6px 14px;
     }
 
     .container {
@@ -214,4 +227,270 @@ i.bi-x {
     }
 }
 
+@media (max-width: 440px) {
+    .header {
+        flex-direction:column;
+        align-items: center;
+        padding: 5px;
+    }
 
+    #logo img {
+        width: 80px;
+        height: 60px;
+        padding-left: 20px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 13px;
+        padding-left: 120px;
+        align-items: center;
+        font-weight: 600;
+    }
+    
+    .navigation li a {
+        font-size: 14px; /* Tamanho menor para os links */
+        font-weight: 600;
+        padding: 6px 14px;
+    }
+
+    .container {
+        padding: 1px;
+        position:relative;
+    }
+
+    table {
+        padding: 10px;
+        position: absolute;
+    }
+
+    th, td {
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .team-icon {
+        width: 15px;
+        height: 15px;
+    }
+
+    i {
+        font-size: 8px;
+    }
+}
+/*FIM DA ESTILIZAÇÃO DA PÁGINA PRINCIPAL*/
+
+
+/*ESTILIZAÇÃO DA PÁGINA MELHOR GOL*/
+.container-V {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Espaçamento interno */
+    margin: 20px; /* Espaçamento externo */
+}
+
+h1{
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+
+}
+
+.div-video {
+    width: 100%;
+    max-width: 600px; /* Largura máxima do vídeo */
+    position: relative;
+    right: 16%;
+    padding-top: 56.25%; /* Proporção 16:9 para vídeos */
+}
+
+.div-video video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 10%;
+    width: 190%;
+    height: 50%;
+    border-radius: 12px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+}
+
+
+.posicao-botao .botao-oficial {
+    background: linear-gradient(135deg, #202b36, #1a232c);
+    color: #fff;
+    margin: 10px;
+    font-size: 25px; 
+    font-weight: 600;
+    text-decoration: none; 
+    border: none; 
+    border-radius: 18px;
+    padding: 10px 20px; 
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.568); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.61); 
+    cursor: pointer;
+    transition: all 0.3s ease, box-shadow 0.3s ease;
+    outline: none;
+}
+
+.posicao-botao .botao-oficial:hover {
+    background: linear-gradient(135deg, #239b2d, #1d7c22); /* Alterar fundo ao passar o mouse */
+    transform: translateY(-2px); /* Elevar botão ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Intensificar sombra ao passar o mouse */
+}
+
+.posicao-botao .botao-oficial:active {
+    transform: translateY(0); /* Remover elevação ao clicar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduzir sombra ao clicar */
+}
+
+@media (max-width: 480px) {
+    h1{
+        text-align: center;
+        font-size: 35px;
+        padding: 50px;
+    }
+
+    .div-video {
+        width: 100%;
+        max-width: 300px; /* Largura máxima do vídeo */
+        position: relative;
+        right: 12%;
+        padding-top: 56.25%; /* Proporção 16:9 para vídeos */
+    }
+
+    .div-video video {
+        position: absolute;
+        max-width: 120%;
+        top: 20%;
+        height: 90%;
+        border-radius: 12px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+        display: flex;
+        margin: 20px; /* Espaçamento externo */
+    }
+
+    .container-V {
+        padding: 10px; /* Reduz o espaçamento em dispositivos móveis */
+        margin: 10px;
+    }
+}
+
+/*FIM DA ESTILIZAÇÃO DA PÁGINA MELHOR GOL*/
+
+
+
+footer {
+    background: linear-gradient(rgba(0, 0, 0, 0.678), rgba(0, 0, 0, 0.63));
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+footer .copyright {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #e0e0e0;
+}
+
+footer .copyright strong {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.568);
+}
+
+footer .copyright i {
+    font-size: 28px;
+    margin-left: 5px;
+    color: #000000;
+    transition: color 0.3s ease;
+    background-color: #ffffff00;
+    text-decoration: none;
+}
+
+footer .copyright i:hover {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+footer .copyright p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.568);
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 10px;
+    }
+
+    footer .container {
+        padding: 0 10px;
+    }
+
+    footer .copyright {
+        font-size: 14px;
+    }
+
+    footer .copyright strong {
+        font-size: 18px;
+    }
+
+    footer .copyright i {
+        font-size: 24px;
+    }
+
+    footer .copyright p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 10px 5px;
+    }
+
+    footer .container {
+        padding: 0 5px;
+    }
+
+    footer .copyright {
+        font-size: 12px;
+    }
+
+    footer .copyright strong {
+        font-size: 16px;
+    }
+
+    footer .copyright i {
+        font-size: 20px;
+    }
+
+    footer .copyright p {
+        font-size: 12px;
+    }
+}
