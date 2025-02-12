@@ -21,7 +21,29 @@
     <link rel="stylesheet" href="style.css">
     <title>Tabela do Brasileirão</title>
 </head>
+
 <body>
-   
+    <div class="posicao-botao">
+        <button class="botao-oficial" type="button" onclick="window.location.href='index.html'">Voltar</button>
+    </div>
+
+    <div class="rebaixados-container">
+        <ul class="rebaixados-lista">
+            <li onclick="mostrarAlerta('Palmeiras')">
+                <img src="images/palmeiras.png" alt="Palmeiras" class="team-icon">Palmeiras
+            </li>
+            <li onclick="mostrarAlerta('Fluminense')">
+                <img src="images/Fluminense.png" alt="Fluminense" class="team-icon">Fluminense
+            </li>
+            <li onclick="mostrarAlerta('Bragantino')">
+                <img src="images/Bragantino.png" alt="Bragantino" class="team-icon">Bragantino
+            </li>
+            <li onclick="mostrarAlerta('Cuiabá')">
+                <img src="images/cuiaba.png" alt="Cuiabá" class="team-icon">Cuiabá
+            </li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
