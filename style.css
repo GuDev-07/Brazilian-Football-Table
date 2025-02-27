@@ -256,6 +256,9 @@ i.bi-x {
         position:relative;
     }
 
+    table{
+        size: 10%;
+    }
 
     th, td {
         padding: 4px;
@@ -414,12 +417,18 @@ h1{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px; /* Ajuste conforme necessário */
+    height: auto;
+    gap: 100px;
+    
 }
 
 .container-artilheiro img {
     height: 400px; /* Tamanho médio ajustável */
     border-radius: 30px;
+    max-width: 400px;
+    height: auto;
+    gap: 100px;
+
 }
 
 .text-box {
@@ -428,7 +437,8 @@ h1{
     margin: auto; /* Centraliza horizontalmente */
     width: 80%; /* Ajuste conforme necessário */
     max-width: 500px; /* Para não ficar muito largo */
-    
+    gap: 100px;
+           
 }
 
 .text-box a{
@@ -442,7 +452,7 @@ h1{
     font-family: "Open Sans", serif;
     font-weight: 550;
     text-align: center;
-    padding: 7px;
+    padding: 11px;
     margin: 5px;
     border: none;
     border-radius: 8px;
@@ -450,6 +460,7 @@ h1{
     cursor: pointer;
     width: 100%; /* Para ocupar toda a largura da caixa */
     transition: 0.3s ease-in-out;
+    
 }
 
 
@@ -458,6 +469,33 @@ h1{
     color: #000000;
     font-weight: 600;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container-artilheiro img {
+        max-width: 300px;
+    }
+
+    .text-box {
+        width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+    }
+
+    .container-artilheiro img {
+        max-width: 250px;
+    }
+
+    .text-box button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
 /*FIM DA ESTILIZAÇÃO PAGE ARTILHEIRO*/
 
 /*ESTILIZAÇÃO PAGE CAMPEÃO*/
