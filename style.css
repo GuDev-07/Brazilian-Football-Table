@@ -274,15 +274,7 @@ i.bi-x {
 
 
 /*ESTILIZAÇÃO DA PÁGINA MELHOR GOL*/
-.container-V {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; /* Espaçamento interno */
-    margin: 20px; /* Espaçamento externo */
-}
-
-h1{
+.gol{
     text-align: center;
     color: #ffffff;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
@@ -292,13 +284,15 @@ h1{
 .div-video {
     width: 100%;
     max-width: 600px; /* Largura máxima do vídeo */
-    position: relative;
-    right: 16%;
-    padding-top: 56.25%; /* Proporção 16:9 para vídeos */
+    position: absolute;
+    right: 50%;
+    padding-top: 59.25%; /* Proporção 16:9 para vídeos */
 }
 
 .div-video video {
     position: absolute;
+    padding: 80px;
+    margin: 10, auto;
     top: 0;
     left: 0;
     right: 10%;
@@ -338,35 +332,31 @@ h1{
 }
 
 /*RESPONSIVIDADE DA PAGE MELHOR GOL*/
-@media (max-width: 940px) {
-    h1{
-        text-align: center;
-        font-size: 33px;
-        padding: 50px;
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px),  (max-device-width: 1024px) and (orientation: portrait) {
+    .gol {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+        padding: 10px;
     }
 
     .div-video {
-        width: 100%;
-        max-width: 300px; /* Largura máxima do vídeo */
-        position: relative;
-        right: 12%;
-        padding-top: 56.25%; /* Proporção 16:9 para vídeos */
+        position: absolute;
+        width: 100%; /* Ajusta a largura do container do vídeo */
+        max-width: 100%;
+        margin: 0 auto; /* Centraliza o vídeo */
+        padding-top: 100;
     }
 
     .div-video video {
-        position: absolute;
-        max-width: 120%;
-        top: 20%;
-        height: 90%;
-        border-radius: 12px; /* Bordas arredondadas */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-        display: flex;
-        margin: 20px; /* Espaçamento externo */
+        width: 100%; /* Garante que o vídeo ocupe toda a largura do container */
+        height: auto;
+        padding: 10; /* Remove espaçamentos desnecessários */
+        left: 200px;
     }
 
-    .container-V {
-        padding: 10px; /* Reduz o espaçamento em dispositivos móveis */
-        margin: 0px;
+    .posicao-botao {
+        text-align: center; /* Centraliza o botão */
+        margin-top: 20px;
     }
 }
 /*FIM DA ESTILIZAÇÃO DA PÁGINA MELHOR GOL*/
@@ -466,6 +456,11 @@ h1{
     transition: 0.3s ease-in-out;
 }
 
+.text-box button:hover {
+    background: #ffffffde;
+    color: #000000;
+}
+
 /* Media queries para torná-lo responsivo */
 @media (max-width: 768px) {
 
@@ -550,6 +545,7 @@ button {
 button img {
     max-width: 100%; /* Garante que a imagem não estoure */
     height: auto;
+    padding-top: 65px;
 }
 
 #fireworks {
@@ -563,8 +559,10 @@ button img {
 
 h1{
     font-size: 40px;
-    text-shadow: #000000;
-    font-weight: 600;
+    font-weight: 800;
+    color: #ffff;
+    text-align: center;
+    text-shadow: 0px 0px 2px rgb(0, 0, 0); 
     
 }
 
@@ -580,6 +578,34 @@ h1{
 .container-campeao img {
     animation: float 3s ease-in-out infinite; /* Aplica a animação */
 }
+
+@media screen and (max-width: 768px) {
+    .container-campeao {
+        height: auto;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduz o tamanho do título */
+        text-align: center;
+        font-weight: 800;
+    }
+
+    button img {
+        max-width: 80%; /* Reduz o tamanho da imagem do campeão */
+    }
+
+    .posicao-botao {
+        text-align: center; /* Centraliza o botão */
+        margin-top: 10px;
+    }
+
+    #fireworks {
+        width: 100%;
+        height: auto;
+    }
+}
+
 
 
 /*FIM DA ESTILIZAÇÃO PAGE CAMPEÃO*/
